@@ -44,10 +44,10 @@ public class CarApiIT {
 
     @Test
     void getCar_returnsCarDetails() {
-        ResponseEntity<Car> entity = testRestTemplate.getForEntity("/car?carId=1", Car.class);
+        ResponseEntity<Car> response = testRestTemplate.getForEntity("/car?carId=1", Car.class);
 
-        assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(entity.getBody().getModel()).isEqualTo("A4");
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(response.getBody().getModel()).isEqualTo("A4");
     }
 
     @Test
@@ -62,29 +62,11 @@ public class CarApiIT {
     }
 
     @Test
-    void postCar_returnsCar() {
-        // request url
-        String url = "http://localhost:8080/car";
+    void whenValidInput_thenCreateCar() {
+        testRestTemplate.postForEntity("/car", new Car("audi", "Q7"), Car.class);
 
-        // create headers
-        HttpHeaders headers = new HttpHeaders();
-        // set `content-type` header
-        headers.setContentType(MediaType.APPLICATION_JSON);
-        // set `accept` header
-        headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
-
-        // request body parameters
-        Map<String, Object> map = new HashMap<>();
-        map.put("car", new Car("audi", "Q7"));
-
-        // build the request
-        HttpEntity<Map<String, Object>> entity = new HttpEntity<>(map, headers);
-
-        // send POST request
-        //ResponseEntity<Car> response = restTemplate.postForEntity(url, entity, new ParameterizedTypeReference<ResponseEntity<Car>>());
-
-        //assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
-        //assertThat(entity.getBody().getModel()).isEqualTo("Q7");
+        List<Car> findAll = carRepository.findAll();
+        assertThat(findAll).extracting(Car::getModel).containsExactly("A4", "modelX", "Q7");
     }
 
 }
