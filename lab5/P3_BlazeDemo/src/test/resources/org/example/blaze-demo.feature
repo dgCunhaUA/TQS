@@ -1,6 +1,6 @@
 Feature: Blaze Demo
 
-  Scenario: Purchase a flight from "Paris" to "Buenos Aires" with "Lufthansa" airline
+  Scenario: Purchase a flight from "Paris" to "Buenos Aires"
     Given I am on "https://blazedemo.com/" page
     And I choose "Paris" for departure city
     And I choose "Buenos Aires" for destination city
