@@ -40,11 +40,6 @@ public class BlazeDemoSteps {
         driver.findElement(By.xpath("//h3[contains(.,\'"+arg0+":\')]")).click();
     }
 
-    @And("I click in {string} button")
-    public void iClickOnButton(String arg0) {
-        driver.findElement(By.xpath("//input[@value=\'"+arg0+"\']")).click();
-    }
-
     @Then("{string} should appear as a h2 title")
     public void shouldAppearAsH2Title(String arg0) {
         driver.findElement(By.xpath("//h2[contains(.,\'"+arg0+"\')]")).click();
