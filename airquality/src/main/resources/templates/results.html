@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+    <div th:each="city : ${city}">
+        <h1 th:text="${city.name}"></h1>
+        <p th:text="'Pais: ' + ${city.country}"></p>
+        <p th:text="'Codigo Postal: ' + ${city.postalCode}"></p>
+        <p th:text="'Latitude: ' + ${city.lat}"></p>
+        <p th:text="'Longitude: ' + ${city.lng}"></p>
+    </div>
+    <div th:each="airQuality : ${airQuality}">
+        <p th:text="'CO: ' + ${airQuality.CO}"></p>
+        <p th:text="'NO2: ' + ${airQuality.NO2}"></p>
+        <p th:text="'OZONE: ' + ${airQuality.OZONE}"></p>
+        <p th:text="'PM10: ' + ${airQuality.PM10}"></p>
+        <p th:text="'PM25: ' + ${airQuality.PM25}"></p>
+        <p th:text="'SO2: ' + ${airQuality.SO2}"></p>
+    </div>
+</body>
+</html>

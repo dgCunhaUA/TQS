@@ -1,0 +1,17 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html" lang="en">
+<head>
+    <title>AirQuality</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+    <h1> Procurar por cidade </h1>
+
+    <form th:action="@{/air-quality}" th:object="${city}" method="post">
+        <input placeholder="Nome da Cidade" name="name" th:value="${city.name}" />
+        <button type="submit">Procurar</button>
+    </form>
+
+</body>
+</html>
