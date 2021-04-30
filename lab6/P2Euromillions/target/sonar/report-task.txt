@@ -1,0 +1,6 @@
+projectKey=tqslabs:euromillions-play
+serverUrl=http://localhost:9001
+serverVersion=8.8.0.42792
+dashboardUrl=http://localhost:9001/dashboard?id=tqslabs%3Aeuromillions-play
+ceTaskId=AXkTqgdD2i4hP4G_-0QX
+ceTaskUrl=http://localhost:9001/api/ce/task?id=AXkTqgdD2i4hP4G_-0QX
