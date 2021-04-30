@@ -1,7 +1,7 @@
 1 e)
 Yes my P2Euromilions project has passed the defined quality gate.
 
-![ScreenShot](/screenshots/print1.png)
+![ScreenShot](https://github.com/dgCunhaUA/TQS/blob/main/lab6/screenshots/print1.png?raw=true)
 
 1 f)
 
@@ -76,3 +76,21 @@ The debt value gives the developer the estimated time that is needed to fix all 
 How many lines are “uncovered”? R: 12 Lines.
 
 And how many conditions? R: 0.
+
+
+**Task 3: Define and apply quality gates
+
+
+Projeto IES
+![ScreenShot](https://github.com/dgCunhaUA/TQS/blob/main/lab6/screenshots/print2.png?raw=true)
+
+
+3 a) The are the metric for the quality gate chosen by myself
+![ScreenShot](https://github.com/dgCunhaUA/TQS/blob/main/lab6/screenshots/print3.png?raw=true)
+
+These metrics focus on security and reliability because the project in case was a smarthouse application so it needed to be safe and have high availability.
+
+
+3 b)
+The quality gate unfortunately was already broken. 4 conditions failed like reliability, security, vulnerabilities and blocker issues.
+I introduced a few more bad smells like some prints and duplicated code.
