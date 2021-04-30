@@ -1,8 +1,7 @@
 1 e)
 Yes my P2Euromilions project has passed the defined quality gate.
 
-![screenshot](file:///home/cunha/Pictures/Screenshot%20from%202021-04-27%2010-07-20.png)
-
+![ScreenShot](/screenshots/print1.png)
 
 1 f)
 
