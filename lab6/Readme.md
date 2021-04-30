@@ -78,11 +78,11 @@ How many lines are “uncovered”? R: 12 Lines.
 And how many conditions? R: 0.
 
 
-**Task 3: Define and apply quality gates
+**Task 3: Define and apply quality gates**
 
 
 Projeto IES
-![ScreenShot](https://github.com/dgCunhaUA/TQS/blob/main/lab6/screenshots/print2.png?raw=true)
+![ScreenShot](https://github.com/dgCunhaUA/TQS/blob/main/lab6/screenshots/print.png?raw=true)
 
 
 3 a) The are the metric for the quality gate chosen by myself
@@ -94,3 +94,4 @@ These metrics focus on security and reliability because the project in case was 
 3 b)
 The quality gate unfortunately was already broken. 4 conditions failed like reliability, security, vulnerabilities and blocker issues.
 I introduced a few more bad smells like some prints and duplicated code.
+
