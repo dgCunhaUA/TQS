@@ -1,3 +1,5 @@
+**Task 1: Analyze an existing project (local Sonar Qube)**
+
 1 e)
 Yes my P2Euromilions project has passed the defined quality gate.
 
