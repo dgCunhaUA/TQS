@@ -1,0 +1,51 @@
+SonarQube plugins:
+  - Python Code Quality and Security 3.4.0.7980 (python)
+  - CSS Code Quality and Security 1.4.0.1899 (cssfamily)
+  - Go Code Quality and Security 1.8.2.1946 (go)
+  - JaCoCo 1.1.0.898 (jacoco)
+  - Kotlin Code Quality and Security 1.8.2.1946 (kotlin)
+  - JavaScript/TypeScript Code Quality and Security 7.3.0.15071 (javascript)
+  - Ruby Code Quality and Security 1.8.2.1946 (ruby)
+  - Scala Code Quality and Security 1.8.2.1946 (sonarscala)
+  - C# Code Quality and Security 8.19.0.28253 (csharp)
+  - Java Code Quality and Security 6.14.0.25463 (java)
+  - HTML Code Quality and Security 3.3.0.2534 (web)
+  - Flex Code Quality and Security 2.6.0.2294 (flex)
+  - XML Code Quality and Security 2.1.0.2861 (xml)
+  - PHP Code Quality and Security 3.16.0.7320 (php)
+  - VB.NET Code Quality and Security 8.19.0.28253 (vbnet)
+Global server settings:
+  - sonar.core.id=BF41A1F2-AXkSc2kT9kjU-UqWEPV0
+  - sonar.core.startTime=2021-04-27T08:30:20+0000
+  - sonar.forceAuthentication=true
+Project server settings:
+Project scanner properties:
+  - sonar.binaries=/home/cunha/Desktop/TQS/TQS/lab1/P2Euromillions/target/classes
+  - sonar.groovy.binaries=/home/cunha/Desktop/TQS/TQS/lab1/P2Euromillions/target/classes
+  - sonar.host.url=http://localhost:9001
+  - sonar.java.binaries=/home/cunha/Desktop/TQS/TQS/lab1/P2Euromillions/target/classes
+  - sonar.java.jdkHome=/usr/lib/jvm/java-8-openjdk-amd64
+  - sonar.java.source=1.8
+  - sonar.java.target=1.8
+  - sonar.java.test.binaries=/home/cunha/Desktop/TQS/TQS/lab1/P2Euromillions/target/test-classes
+  - sonar.java.test.libraries=/home/cunha/Desktop/TQS/TQS/lab1/P2Euromillions/target/classes,/home/cunha/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar,/home/cunha/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar,/home/cunha/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar,/home/cunha/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar,/home/cunha/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar,/home/cunha/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar
+  - sonar.junit.reportPaths=/home/cunha/Desktop/TQS/TQS/lab1/P2Euromillions/target/surefire-reports
+  - sonar.junit.reportsPath=/home/cunha/Desktop/TQS/TQS/lab1/P2Euromillions/target/surefire-reports
+  - sonar.links.ci=
+  - sonar.links.homepage=
+  - sonar.links.issue=
+  - sonar.links.scm=
+  - sonar.links.scm_dev=
+  - sonar.login=******
+  - sonar.moduleKey=tqslabs:euromillions-play
+  - sonar.projectBaseDir=/home/cunha/Desktop/TQS/TQS/lab1/P2Euromillions
+  - sonar.projectBuildDir=/home/cunha/Desktop/TQS/TQS/lab1/P2Euromillions/target
+  - sonar.projectKey=tqslabs:euromillions-play
+  - sonar.projectName=euromillions-play
+  - sonar.projectVersion=1.0-SNAPSHOT
+  - sonar.scanner.app=ScannerMaven
+  - sonar.scanner.appVersion=3.8.0.2131/3.6.0
+  - sonar.sourceEncoding=UTF-8
+  - sonar.sources=/home/cunha/Desktop/TQS/TQS/lab1/P2Euromillions/pom.xml,/home/cunha/Desktop/TQS/TQS/lab1/P2Euromillions/src/main/java
+  - sonar.tests=/home/cunha/Desktop/TQS/TQS/lab1/P2Euromillions/src/test/java
+  - sonar.working.directory=/home/cunha/Desktop/TQS/TQS/lab1/P2Euromillions/target/sonar

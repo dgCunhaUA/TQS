@@ -15,7 +15,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @Testcontainers
 @SpringBootTest
-class BookWithPostgresIT {
+class BookWithPostgresTest {
 
     @Autowired
     BookRepository bookRepository;
@@ -49,7 +49,7 @@ class BookWithPostgresIT {
         Book book = new Book(1L, "Think Like a Monk");
         bookRepository.save(book);
 
-        Book book2 = bookRepository.findBookByTitle("Think Like a Monk");
+        Book book2 = bookRepository.findByTitle("Think Like a Monk");
 
         if(book2.getTitle().equals(book.getTitle()))
             System.out.println("Book Created and saved!");
@@ -58,7 +58,7 @@ class BookWithPostgresIT {
     @Test
     @Order(2)
     void testGetBook() {
-        Book book = bookRepository.findBookByTitle("Think Like a Monk");
+        Book book = bookRepository.findByTitle("Think Like a Monk");
 
         System.out.println(book.getTitle());
         assert book != null;
@@ -69,7 +69,7 @@ class BookWithPostgresIT {
     @Test
     @Order(3)
     void testUpdateBook() {
-        Book book = bookRepository.findBookByTitle("Think Like a Monk");
+        Book book = bookRepository.findByTitle("Think Like a Monk");
         book.setTitle("Other book");
         bookRepository.save(book);
 
@@ -80,7 +80,8 @@ class BookWithPostgresIT {
     @Test
     @Order(4)
     void testDeleteBook() {
-        Book book = bookRepository.findBookById(2L);
+        Book book = bookRepository.findByTitle("Other1234");
+        System.out.println(book.getTitle());
         bookRepository.delete(book);
 
         System.out.println("Book deleted!");

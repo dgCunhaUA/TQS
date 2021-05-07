@@ -4,4 +4,4 @@ CREATE TABLE books (
 );
 
 INSERT INTO books(id, title) VALUES (1, 'Think Like a Monk');
-INSERT INTO books(id, title) VALUES (2, 'Other');
+INSERT INTO books(id, title) VALUES (2, 'Other1234');

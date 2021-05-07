@@ -1,0 +1,5 @@
+com/lab/cars/demo/entities/Car.class
+com/lab/cars/demo/repository/CarRepository.class
+com/lab/cars/demo/services/CarManagerService.class
+com/lab/cars/demo/controller/CarController.class
+com/lab/cars/demo/DemoApplication.class
