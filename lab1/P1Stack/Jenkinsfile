@@ -6,6 +6,11 @@ pipeline {
         } 
         stages {       
             stage('install') {  
+                steps {
+                    dir('/lab1/P1Stack'){
+                        sh "$PWD"          
+                       }
+                    }
                 steps {               
                     sh 'mvn clean install'                      
                 }  
