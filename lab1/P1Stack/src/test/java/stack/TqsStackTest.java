@@ -103,4 +103,8 @@ class TqsStackTest {
         assertThrows(IllegalStateException.class, () -> { boundedStack.push("4"); });
     }
 
+    @Test
+    void failingTest() {
+        fail("test failed");
+    }
 }
