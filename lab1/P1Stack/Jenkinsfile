@@ -5,15 +5,16 @@ pipeline {
             maven 'Mvn1'   
         } 
         stages {       
-            stage('test java installation') {  
+            stage('install') {  
                 steps {               
-                    sh 'java -version'                        
-                }       
+                    sh 'mvn clean install'                      
+                }  
+                post {
+                    alway {
+                        junit '**/target/*-reports/TEST-*.xml' 
+                    }
+                }     
             } 
-            stage('test maven installation') {
-                steps { 
-                    sh 'mvn -version'                      
-                }      
-            }  
+            
         }
     }
