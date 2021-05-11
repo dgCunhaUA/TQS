@@ -10,7 +10,7 @@ pipeline {
                     sh 'mvn clean install'                      
                 }  
                 post {
-                    alway {
+                    always {
                         junit '**/target/*-reports/TEST-*.xml' 
                     }
                 }     
