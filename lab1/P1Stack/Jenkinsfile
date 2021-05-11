@@ -5,22 +5,12 @@ pipeline {
             maven 'Mvn1'   
         } 
         stages {       
-            stage('test java installation') {
-                steps {  
-                    dir('your-sub-directory'){
-                        sh "$PWD"           
-                    }
-                } 
+            stage('test java installation') {  
                 steps {               
                     sh 'java -version'                        
                 }       
             } 
             stage('test maven installation') {
-                teps {  
-                    dir('your-sub-directory'){
-                        sh "$PWD"           
-                    }
-                } 
                 steps { 
                     sh 'mvn -version'                      
                 }      
