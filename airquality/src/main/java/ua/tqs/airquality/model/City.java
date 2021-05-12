@@ -1,4 +1,4 @@
-package ua.tqs.airquality.entity;
+package ua.tqs.airquality.model;
 
 public class City {
 
@@ -47,5 +47,16 @@ public class City {
 
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
+    }
+
+    @Override
+    public String toString() {
+        return "City{" +
+                "name='" + name + '\'' +
+                ", country='" + country + '\'' +
+                ", lat='" + lat + '\'' +
+                ", lng='" + lng + '\'' +
+                ", postalCode='" + postalCode + '\'' +
+                '}';
     }
 }

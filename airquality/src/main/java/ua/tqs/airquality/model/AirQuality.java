@@ -1,4 +1,4 @@
-package ua.tqs.airquality.entity;
+package ua.tqs.airquality.model;
 
 public class AirQuality {
 
@@ -8,7 +8,6 @@ public class AirQuality {
     private String PM10;
     private String PM25;
     private String SO2;
-    private String overall;
 
 
     public String getCO() {
@@ -25,14 +24,6 @@ public class AirQuality {
 
     public void setNO2(String NO2) {
         this.NO2 = NO2;
-    }
-
-    public String getOverall() {
-        return overall;
-    }
-
-    public void setOverall(String overall) {
-        this.overall = overall;
     }
 
     public String getOZONE() {
@@ -65,5 +56,17 @@ public class AirQuality {
 
     public void setSO2(String SO2) {
         this.SO2 = SO2;
+    }
+
+    @Override
+    public String toString() {
+        return "AirQuality{" +
+                "CO='" + CO + '\'' +
+                ", NO2='" + NO2 + '\'' +
+                ", OZONE='" + OZONE + '\'' +
+                ", PM10='" + PM10 + '\'' +
+                ", PM25='" + PM25 + '\'' +
+                ", SO2='" + SO2 + '\'' +
+                '}';
     }
 }
