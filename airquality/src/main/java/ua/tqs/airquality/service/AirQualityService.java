@@ -47,20 +47,20 @@ public class AirQualityService {
         logger.log(Level.INFO, "External API Response: " + response);
 
         // Incr number os Request
-        cache.requestsIncr();
-        logger.log(Level.INFO, "Cache requests increased");
+        //cache.requestsIncr();
+        //logger.log(Level.INFO, "Cache requests increased");
 
 
         var gson = new Gson();
         Map jsonMap = gson.fromJson(response, Map.class);
 
         if( jsonMap.get("message").equals("success") ) {
-            cache.hitsIncr();
-            logger.log(Level.INFO, "Response with success / Number of hits increased");
+            //cache.hitsIncr();
+            logger.log(Level.INFO, "Response with success");
         }
         else {
-            cache.missesIncr();
-            logger.log(Level.INFO, "Response with failure / Number of misses increased");
+            //cache.missesIncr();
+            logger.log(Level.INFO, "Response with failure");
 
             AirQuality airQuality = new AirQuality();
             airQuality.setCO("-");

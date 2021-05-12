@@ -52,7 +52,7 @@ class CacheTest {
     }
 
     @Test
-    void storeRequest() {
+    void whenStoreRequest() {
         city.setName("\"Test\"");
         airQuality.setCO("10");
 
@@ -82,35 +82,51 @@ class CacheTest {
     }
 
     @Test
-    void getRequest() {
-        String search_city = "Test";
-        String search_city2 = "Test2";
+    void whenGetValidRequest() {
+        String storedCity = "Test";
         city.setName("\"Test\"");
         airQuality.setCO("10");
-
 
         cache.storeRequest(city, airQuality);
         assertEquals(cache.getLastRequests().size(), 1);
 
+
         HashMap<City, AirQuality> data = new HashMap<City, AirQuality>();
         data.put(city, airQuality);
 
-        assertEquals(cache.getRequest(cache, search_city), data);
+        assertEquals(cache.getRequest(cache, storedCity), data);
         assertEquals(data.size(), 1);
+        assertEquals(cache.getNumOfRequests(), 1);
+        assertEquals(cache.getNumOfHits(), 1);
+        assertEquals(cache.getNumOfMisses(), 0);
 
 
-        HashMap<City, AirQuality> data2 = new HashMap<City, AirQuality>();
 
-        assertEquals(cache.getRequest(cache, search_city2), data2);
-        assertEquals(data2.size(), 0);
     }
 
     @Test
-    void getExpiredRequest() throws InterruptedException {
-        String search_city = "Test";
+    void whenGetInvalidRequest() {
+        String NonStoredCity = "Non-stored-city";
         city.setName("\"Test\"");
         airQuality.setCO("10");
 
+        cache.storeRequest(city, airQuality);
+        assertEquals(cache.getLastRequests().size(), 1);
+
+        HashMap<City, AirQuality> data2 = new HashMap<City, AirQuality>();
+
+        assertEquals(cache.getRequest(cache, NonStoredCity), data2);
+        assertEquals(data2.size(), 0);
+        assertEquals(cache.getNumOfRequests(), 1);
+        assertEquals(cache.getNumOfHits(), 0);
+        assertEquals(cache.getNumOfMisses(), 1);
+    }
+
+    @Test
+    void whenGetExpiredRequest() throws InterruptedException {
+        String search_city = "Test";
+        city.setName("\"Test\"");
+        airQuality.setCO("10");
 
         cache.storeRequest(city, airQuality);
         assertEquals(cache.getLastRequests().size(), 1);
@@ -120,5 +136,8 @@ class CacheTest {
 
         HashMap<City, AirQuality> data = cache.getRequest(cache, search_city);
         assertEquals(data.size(), 0);
+        assertEquals(cache.getNumOfRequests(), 1);
+        assertEquals(cache.getNumOfHits(), 0);
+        assertEquals(cache.getNumOfMisses(), 1);
     }
 }

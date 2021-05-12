@@ -31,7 +31,7 @@ public class AirQualityController {
     }
 
     @RequestMapping(value = "/air-quality", method = RequestMethod.GET)
-    public String postCityName(@ModelAttribute City city, Model model) throws IOException, InterruptedException {
+    public String getAirQualityByCityName(@ModelAttribute City city, Model model) throws IOException, InterruptedException {
         logger.log(Level.INFO, "Get city name to search for airquality: {0}", city.toString());
 
         logger.log(Level.INFO, "External API Request for {0}", city.getName());

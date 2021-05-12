@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ServiceConvertersTest {
 
-    //TODO: Other string to convert\
+    //TODO: Other string to convert
     @Test
     void whenConvertingSimpleString() {
 

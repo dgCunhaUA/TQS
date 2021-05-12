@@ -1,5 +1,6 @@
 package ua.tqs.airquality.controller;
 
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -12,12 +13,13 @@ import ua.tqs.airquality.service.AirQualityService;
 
 import java.util.HashMap;
 
-import static org.hamcrest.Matchers.hasSize;
-import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.*;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
 
 @WebMvcTest(AirQualityRestController.class)
 class AirQualityController_WithMockServiceTest {
@@ -50,7 +52,7 @@ class AirQualityController_WithMockServiceTest {
         HashMap<City, AirQuality> response = new HashMap<>();
         response.put(cityObj, airQuality);
 
-        when( airQualityService.getCurrentAirQualityByCity("Viseu") ).thenReturn(response);
+        when(airQualityService.getCurrentAirQualityByCity("Viseu")).thenReturn(response);
 
         //TODO: Erro ao fazer get
         City testeCity = new City();
@@ -61,15 +63,26 @@ class AirQualityController_WithMockServiceTest {
                 .flashAttr("city", testeCity))
                 .andExpect(status().isOk())
                 .andExpect(view().name("results"));
-         */
+        */
 
         //TODO:
-        mvc.perform(get("/air-quality?name=Viseu").contentType("text/html;charset=UTF-8")
+        mvc.perform(get("/air-quality").contentType(MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+                .param("name", "Viseu")
                 )
                 .andExpect(status().isOk());
 
         verify(airQualityService, times(1)).getCurrentAirQualityByCity("Viseu");
+
+        /*
+        mvc.perform(post("/air-quality").contentType(MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+                .param("name", "Viseu"))
+                .andDo( print())
+                .andExpect(status().isOk())
+                .andExpect(model().attribute("city", Matchers.<City>
+                        hasProperty("name", containsString("Viseu"))));
+         */
     }
+
 
 
     @Test
@@ -97,7 +110,7 @@ class AirQualityController_WithMockServiceTest {
 
 
         //TODO:
-        mvc.perform(get("/air-quality").contentType(MediaType.APPLICATION_JSON))
+        mvc.perform(get("/air-quality?name=x;zx'zw").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().json("{\"City{name='City Not Found', country='-', lat='-', lng='-', postalCode='-'}\":{\"co\":\"-\",\"no2\":\"-\",\"ozone\":\"-\",\"pm10\":\"-\",\"pm25\":\"-\",\"so2\":\"-\"}}")
                 );
