@@ -15,7 +15,7 @@
     </div>
 
     <div class="container form-container">
-        <form th:action="@{/air-quality}" th:object="${city}" method="post">
+        <form th:action="@{/air-quality}" th:object="${city}" method="get">
             <h2 class="search-text"> Procurar por Cidade </h2>
             <label for="cityName"></label><input placeholder="Nome da Cidade" name="name" id="cityName" th:value="${city.name}" class="input"/>
 

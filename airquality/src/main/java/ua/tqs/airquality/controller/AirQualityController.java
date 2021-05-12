@@ -30,18 +30,18 @@ public class AirQualityController {
         return "index";
     }
 
-    @RequestMapping(value = "/air-quality", method = RequestMethod.POST)
+    @RequestMapping(value = "/air-quality", method = RequestMethod.GET)
     public String postCityName(@ModelAttribute City city, Model model) throws IOException, InterruptedException {
-        logger.log(Level.INFO, "Posted city name to search for airquality: " + city.toString());
+        logger.log(Level.INFO, "Get city name to search for airquality: {0}", city.toString());
 
-        logger.log(Level.INFO, "External API Request for " + city.getName());
+        logger.log(Level.INFO, "External API Request for {0}", city.getName());
         HashMap<City, AirQuality> response = airQualityService.getCurrentAirQualityByCity(city.getName());
         logger.log(Level.INFO, "Response: " + response.toString());
 
         for (City i : response.keySet()) {
             AirQuality airQuality = response.get(i);
 
-            logger.log(Level.INFO, "Return template, infos: " + city.toString() + airQuality.toString());
+            logger.log(Level.INFO, "Return template, infos: " + i.toString() + airQuality.toString());
             model.addAttribute("airQuality", airQuality);
             model.addAttribute("city", i);
             return "results";
