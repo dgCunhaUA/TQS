@@ -39,10 +39,9 @@ public class AirQualityRestControllerIT {
         cityObj.setPostalCode("\"3500-004\"");
 
 
-        //TODO: Verify city information
-
         mvc.perform(get("/api/air-quality/Viseu").contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk()
+                .andExpect(status().isOk())
+                .andExpect(content().json("{City{name='\"Viseu\"', country='\"PT\"', lat='40.661', lng='-7.9097', postalCode='\"3500-004\"'}")
                 );
 
     }
@@ -66,7 +65,6 @@ public class AirQualityRestControllerIT {
         cityObj.setLng("-");
 
 
-        //TODO: Verify city information
         mvc.perform(get("/api/air-quality/Errorrrrr").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().json("{\"City{name='City Not Found', country='-', lat='-', lng='-', postalCode='-'}\":{\"co\":\"-\",\"no2\":\"-\",\"ozone\":\"-\",\"pm10\":\"-\",\"pm25\":\"-\",\"so2\":\"-\"}}")

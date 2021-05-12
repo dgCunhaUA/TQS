@@ -45,7 +45,6 @@ class AirQualityControllerIT {
                 .flashAttr("city", testeCity))
                 .andExpect(status().isOk())
                 .andExpect(view().name("results"));
-
          */
 
         mvc.perform(post("/air-quality").contentType(MediaType.APPLICATION_FORM_URLENCODED_VALUE)

@@ -116,7 +116,7 @@ class CacheTest {
         assertEquals(cache.getLastRequests().size(), 1);
 
         LOGGER.log(Level.INFO, "Waiting expiration time ...");
-        TimeUnit.SECONDS.sleep(5);
+        TimeUnit.SECONDS.sleep(8);
 
         HashMap<City, AirQuality> data = cache.getRequest(cache, search_city);
         assertEquals(data.size(), 0);
