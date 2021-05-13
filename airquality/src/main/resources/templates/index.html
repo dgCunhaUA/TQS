@@ -18,13 +18,26 @@
         <form th:action="@{/air-quality}" th:object="${city}" method="get">
             <h2 class="search-text"> Procurar por Cidade </h2>
             <label for="cityName"></label><input placeholder="Nome da Cidade" name="name" id="cityName" th:value="${city.name}" class="input"/>
-
             <br>
 
             <button type="submit" class="search-btn" id="searchBtn">
                 <a class="btn btn-sm animated-button thar-one">Pesquisar</a>
             </button>
       </form>
+
+      <hr>
+
+      <form th:action="@{/air-quality-lat-lng}" th:object="${city}" method="get">
+          <h2 class="search-text"> Procurar por Lat e Lng </h2>
+
+          <label for="cityLat"></label><input placeholder="Latitude" id="cityLat" name="lat" th:value="${city.lat}" class="input"/>
+          <label for="cityLng"></label><input placeholder="Longitude" id="cityLng" name="lng" th:value="${city.lng}" class="input"/>
+          <br>
+          <button type="submit" class="search-btn" id="searchBtn1">
+              <a class="btn btn-sm animated-button thar-one">Pesquisar</a>
+          </button>
+      </form>
+
     </div>
 
 </body>

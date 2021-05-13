@@ -1,6 +1,7 @@
 package ua.tqs.airquality.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import ua.tqs.airquality.model.AirQuality;
 import ua.tqs.airquality.cache.Cache;
@@ -29,6 +30,16 @@ public class AirQualityRestController {
         logger.log(Level.INFO, "External API Request");
         HashMap<City, AirQuality> response = airQualityService.getCurrentAirQualityByCity(city);
         logger.log(Level.INFO, response.toString());
+
+        return response;
+    }
+
+    @RequestMapping(value = "/air-quality-lat-lng", method = RequestMethod.GET)
+    public HashMap<City, AirQuality> getAirQualityByLatLng( @RequestParam(value = "lat", required = false) String lat, @RequestParam(value = "lng", required = false) String lng, Model model) throws IOException, InterruptedException {
+        logger.log(Level.INFO, "Get city lat and lng to search for airquality: " + lat + " - " + lng);
+
+        HashMap<City, AirQuality> response = airQualityService.getCurrentAirQualityByLatLng(lat, lng);
+        logger.log(Level.INFO, "Response: " + response.toString());
 
         return response;
     }

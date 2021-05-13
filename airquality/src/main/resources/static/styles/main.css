@@ -130,3 +130,7 @@ hr {
 .air-quality p {
     color: white;
 }
+
+.invisible-input {
+    visibility: hidden;
+}

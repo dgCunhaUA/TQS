@@ -9,10 +9,10 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ServiceConvertersTest {
 
-    //TODO: Other string to convert
     @Test
     void whenConvertingSimpleString() {
 
@@ -22,6 +22,18 @@ public class ServiceConvertersTest {
         Map jsonMap = gson.fromJson(response, Map.class);
 
         assertEquals("success", jsonMap.get("message").toString());
+    }
+
+    @Test
+    void whenConvertingSimpleInvalidString() {
+
+        String response = "{\"message\":\"success\"";
+        String response2 = "{\"message\" \"success\"}";
+
+        var gson = new Gson();
+        assertThrows( com.google.gson.JsonSyntaxException.class, () -> { gson.fromJson(response, Map.class); });
+        assertThrows( com.google.gson.JsonSyntaxException.class, () -> { gson.fromJson(response2, Map.class); });
+
     }
 
     @Test

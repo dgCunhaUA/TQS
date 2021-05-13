@@ -58,6 +58,31 @@ public class Cache {
         return data;
     }
 
+    public HashMap<City, AirQuality> getRequestLatLng(Cache cache, String lat, String lng) {
+        LOGGER.log(Level.INFO, "Getting Request ...");
+        HashMap<City, AirQuality> data = new HashMap<>();
+
+        // Incr number os Request
+        requestsIncr();
+
+        for (City i : cache.getLastRequests().keySet()) {
+            if( i.getLat().equals(lat) && i.getLng().equals(lng) ) {
+                if ( hasExpired(i) ) {
+                    LOGGER.log(Level.INFO, "Expired ...");
+                    removeExpiredRequest(i);
+                } else {
+                    data.put(i, cache.getLastRequests().get(i));
+
+                    hitsIncr();
+                    return data;
+                }
+            }
+        }
+
+        missesIncr();
+        return data;
+    }
+
     public void requestsIncr() { numOfRequests++; }
 
     public void hitsIncr() { numOfHits++; }
