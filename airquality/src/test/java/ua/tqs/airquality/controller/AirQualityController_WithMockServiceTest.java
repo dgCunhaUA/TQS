@@ -31,6 +31,7 @@ class AirQualityController_WithMockServiceTest {
     private AirQualityService airQualityService;
 
 
+    /*
     //@Test
     void whenGetAirQualityByCityName_thenReturnData() throws Exception {
 
@@ -63,7 +64,7 @@ class AirQualityController_WithMockServiceTest {
                 .flashAttr("city", testeCity))
                 .andExpect(status().isOk())
                 .andExpect(view().name("results"));
-        */
+
 
         //TODO:
         mvc.perform(get("/air-quality").contentType(MediaType.APPLICATION_FORM_URLENCODED_VALUE)
@@ -80,8 +81,9 @@ class AirQualityController_WithMockServiceTest {
                 .andExpect(status().isOk())
                 .andExpect(model().attribute("city", Matchers.<City>
                         hasProperty("name", containsString("Viseu"))));
-         */
+
     }
+   */
 
 
 
