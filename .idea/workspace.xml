@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5656ee46-cb78-4574-b2a4-9bae43f53015" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/lab1/P2Euromillions/target/classes/euromillions/CuponEuromillions.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/P2Euromillions/target/classes/euromillions/CuponEuromillions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/P2Euromillions/target/classes/euromillions/Dip.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/P2Euromillions/target/classes/euromillions/Dip.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/P2Euromillions/target/classes/euromillions/EuromillionsDraw.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/P2Euromillions/target/classes/euromillions/EuromillionsDraw.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/P2Euromillions/target/classes/sets/SetOfNaturals.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/P2Euromillions/target/classes/sets/SetOfNaturals.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/P2Euromillions/target/classes/ui/DemoMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/P2Euromillions/target/classes/ui/DemoMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/P2Euromillions/target/euromillions-play-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/P2Euromillions/target/euromillions-play-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/P2Euromillions/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/P2Euromillions/target/jacoco.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/P2Euromillions/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/P2Euromillions/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/P2Euromillions/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/P2Euromillions/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/P2Euromillions/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/P2Euromillions/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/P2Euromillions/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/P2Euromillions/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/P2Euromillions/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/P2Euromillions/target/site/jacoco/jacoco.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/P2Euromillions/target/surefire-reports/TEST-euromillions.DipTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/P2Euromillions/target/surefire-reports/TEST-euromillions.DipTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/P2Euromillions/target/surefire-reports/TEST-euromillions.EuromillionsDrawTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/P2Euromillions/target/surefire-reports/TEST-euromillions.EuromillionsDrawTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/P2Euromillions/target/surefire-reports/TEST-sets.SetOfNaturalsTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/P2Euromillions/target/surefire-reports/TEST-sets.SetOfNaturalsTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/P2Euromillions/target/surefire-reports/euromillions.DipTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/P2Euromillions/target/surefire-reports/euromillions.DipTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/P2Euromillions/target/surefire-reports/euromillions.EuromillionsDrawTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/P2Euromillions/target/surefire-reports/euromillions.EuromillionsDrawTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/P2Euromillions/target/surefire-reports/sets.SetOfNaturalsTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/P2Euromillions/target/surefire-reports/sets.SetOfNaturalsTest.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1rqi4yo9TgjXyVkrMSeovvN4n1T" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Projeto IES/IES-P1G3" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5656ee46-cb78-4574-b2a4-9bae43f53015" name="Default Changelist" comment="" />
+      <created>1619709833741</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619709833741</updated>
+      <workItem from="1619709834980" duration="1166000" />
+      <workItem from="1619713056890" duration="557000" />
+      <workItem from="1619713655616" duration="137000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2050" y="405" width="608" height="294" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1619713672369">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2050" y="405" width="608" height="294" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1366.0.1920.1080/0.176.1366.768@1366.0.1920.1080" timestamp="1619713672369" />
+    <state x="2142" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1619713793575">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2142" y="310" width="424" height="484" key="FileChooserDialogImpl/1366.0.1920.1080/0.176.1366.768@1366.0.1920.1080" timestamp="1619713793575" />
+  </component>
+</project>
